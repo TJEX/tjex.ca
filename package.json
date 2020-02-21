@@ -1,0 +1,16 @@
+{
+  "name": "tjex.ca",
+  "version": "1.0.0",
+  "description": "Toronto Japanese Exchange website.",
+  "main": "app/app.js",
+  "scripts": {
+    "start": "node app/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Brandon Cardoso",
+  "license": "ISC",
+  "dependencies": {
+    "config": "^3.2.5",
+    "express": "^4.17.1"
+  }
+}
