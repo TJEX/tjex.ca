@@ -1,5 +1,5 @@
 function homepage(req, res) {
-  res.send('Toronto Japanese Exchange')
+  res.render('home')
 }
 
 module.exports = {
