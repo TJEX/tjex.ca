@@ -1,2 +1,10 @@
 @charset "utf-8";
 @import "../../node_modules/bulma/bulma.sass";
+
+.navbar-item img {
+	max-height: 3.5rem;
+}
+
+.navbar-item.logo {
+	flex: 1;
+}
