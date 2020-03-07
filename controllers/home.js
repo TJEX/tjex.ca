@@ -4,7 +4,7 @@ const reqp = require('request-promise')
 
 const NUM_UPCOMING_EVENTS = 5
 
-function homepage(req, res) {
+function index(req, res) {
   reqp({ uri: 'http://api.meetup.com/tjex-ca/events',
     qs: {
       offset: 0,
@@ -13,17 +13,17 @@ function homepage(req, res) {
     },
     json: true
   })
-  .then((api_res) => {
-    let events = _.chain(api_res)
-      .map((event) => {
-        event.formatted_starttime = moment(event.time).format('ddd, MMM D, h:mm a')
-        return event
-      })
-      .value()
-    res.render('home', { events })
-  })
+    .then((api_res) => {
+      let events = _.chain(api_res)
+        .map((event) => {
+          event.formatted_starttime = moment(event.time).format('ddd, MMM D, h:mm a')
+          return event
+        })
+        .value()
+      res.render('home', { events })
+    })
 }
 
 module.exports = {
-  homepage
+  index
 }

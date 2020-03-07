@@ -3,5 +3,6 @@ const route = express.Router()
 const controllers = require('../controllers')
 
 module.exports = (app) => {
-  app.get('/', controllers.home.homepage)
+  app.get('/', controllers.home.index)
+  app.get('/locations', controllers.locations.index)
 }

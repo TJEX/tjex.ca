@@ -1,3 +1,4 @@
 module.exports = {
-  home: require('./home.js')
+  home: require('./home.js'),
+  locations: require('./locations.js')
 }
