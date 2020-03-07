@@ -6,7 +6,40 @@
     <%- include('partials/nav') %>
     <section class="section">
       <div class="container">
-        Toronto Japanese Exchange
+        <div class="columns">
+          <div class="column">
+            <h1 class="title is-5">
+              Welcome to TJEX!
+            </h1>
+            <p>
+            TJEX is a friendly community of individuals enthusiastic about the Japanese language and culture.
+            We provide a structured, organized language exchange between language learners and advanced/native speakers of English and Japanese.
+            </p>
+            <br>
+            <p>
+            TJEX is for individuals wishing to practice or improve their fluency in Japanese or English. All levels of language are welcome, even complete beginners.
+            It’s also an excellent opportunity to meet new people, practice your English/Japanese, and have fun!
+            </p>
+            <br>
+            <p>
+            Our language exchange is every Saturday & Wednesday evening, with optional dinner or coffee afterwards.
+            We also have many special events, often taking us outside of Toronto, including our annual maple syrup sugar bush tours, Hanami, ice wine & Niagara Falls tours, and St. Jacobs Farmers’ Market trip.
+            </p>
+          </div>
+          <div class="column">
+            <div class="container">
+              <h1 class="title is-6">Upcoming events...</h1>
+              <% events.forEach(function (event) { %>
+              <%- include('partials/event-card', { event }) %>
+              <% }) %>
+              <h3 class="title is-7 has-text-centered">
+                <a href="https://www.meetup.com/tjex-ca">
+                  See all upcoming events on Meetup!
+                </a>
+              </h3>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </body>
