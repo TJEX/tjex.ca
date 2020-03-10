@@ -1,5 +1,6 @@
 module.exports = {
   home: require('./home.js'),
   locations: require('./locations.js'),
-  about: require('./about.js')
+  about: require('./about.js'),
+  contact: require('./contact.js')
 }
