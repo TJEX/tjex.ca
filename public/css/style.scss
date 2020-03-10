@@ -12,3 +12,45 @@
 .event-card .title {
 	margin-bottom: 0.5rem;
 }
+
+.staff-card {
+	margin-bottom: 2rem;
+
+	.image {
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 0.5rem;
+
+		img {
+			max-width: 10rem;
+		}
+	}
+
+	i {
+		font-size: 5rem;
+	}
+
+	.subtitle {
+		margin-bottom: 0.75rem;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.staff-card.main-staff .image {
+		justify-content: flex-end;
+	}
+}
+
+.staff-card.main-staff {
+	.image img {
+		max-width: 15rem;
+	}
+
+	.info {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+}

@@ -5,4 +5,5 @@ const controllers = require('../controllers')
 module.exports = (app) => {
   app.get('/', controllers.home.index)
   app.get('/locations', controllers.locations.index)
+  app.get('/about', controllers.about.index)
 }
