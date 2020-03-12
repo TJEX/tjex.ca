@@ -5,45 +5,49 @@
   <body>
     <%- include('partials/nav') %>
     <section class="section">
-      <div class="columns">
-        <div class="column">
-          <h1 class="title is-4">Contact</h1>
-          <p>
-          Have a question or comment about TJEX? Send us a
-          message!
-          </p>
-          <p class="has-text-weight-medium has-text-grey-dark">
-          * If you're attending one of our meetups and there's a
-          problem, contact the organizer for the event on the
-          Meetup app.
-          </p>
-        </div>
-        <div class="column">
-          <form id="contact-form" action="/contact" method="POST">
-            <div class="field">
-              <label class="label">Name</label>
-              <div class="control">
-                <input class="input" type="text" name="contact-name" required>
-              </div>
+      <div class="container">
+        <div class="columns is-multiline is-centered">
+          <div class="column is-12-tablet is-7-desktop">
+            <h1 class="title is-8-tablet is-5-desktop">Contact</h1>
+            <p>
+            Have a question or comment about TJEX? Send us a
+            message!
+            </p>
+            <p class="has-text-weight-medium has-text-grey-dark">
+            * If you're attending one of our meetups and there's a
+            problem, contact the organizer for the event on the
+            Meetup app.
+            </p>
+          </div>
+          <div class="column is-8-tablet is-5-desktop">
+            <div class="box">
+              <form id="contact-form" action="/contact" method="POST">
+                <div class="field">
+                  <label class="label">Name</label>
+                  <div class="control">
+                    <input class="input" type="text" name="contact-name" required>
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Email</label>
+                  <div class="control">
+                    <input class="input" type="email" name="contact-email" required>
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Message</label>
+                  <div class="control">
+                    <textarea class="textarea" name="contact-message" required></textarea>
+                  </div>
+                </div>
+                <div class="field is-grouped is-grouped-right">
+                  <div class="control">
+                    <button class="button is-link" type="submit">Submit</button>
+                  </div>
+                </div>
+              </form>
             </div>
-            <div class="field">
-              <label class="label">Email</label>
-              <div class="control">
-                <input class="input" type="email" name="contact-email" required>
-              </div>
-            </div>
-            <div class="field">
-              <label class="label">Message</label>
-              <div class="control">
-                <textarea class="textarea" name="contact-message" required></textarea>
-              </div>
-            </div>
-            <div class="field is-grouped is-grouped-right">
-              <div class="control">
-                <button class="button is-link" type="submit">Submit</button>
-              </div>
-            </div>
-          </form>
+          </div>
         </div>
       </div>
     </section>

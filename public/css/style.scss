@@ -1,5 +1,24 @@
 @charset "utf-8";
+
+$tjex-white: #fafafa;
+
+/* bulma overrides */
+
+$primary: #ea0005;
+
+// navbar
+$navbar-background-color: $tjex-white;
+
+// box
+$box-shadow: none;
+
 @import "../../node_modules/bulma/bulma.sass";
+/* end bulma */
+
+
+html {
+	background-color: $tjex-white;
+}
 
 .navbar-item img {
 	max-height: 3.5rem;

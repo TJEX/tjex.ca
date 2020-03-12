@@ -17,32 +17,34 @@
           <% STAFF.forEach(function (staff) { %>
           <% if (staff.main) { %>
           <div class="column staff-card main-staff is-full-mobile is-half-tablet">
-            <div class="columns">
-              <div class="image column">
-                <% if (staff.image) { %>
-                <img class="is-rounded" src="<%= staff.image %>" />
-                <% } else { %>
-                <i class="far fa-smile has-text-grey-lighter"></i>
-                <% } %>
-              </div>
-              <div class="info column has-text-centered-mobile">
-                <h1 class="title has-subtitle is-6">
-                  <%= staff.name %>
-                </h1>
-                <h3 class="subtitle is-7 has-text-grey">
-                  <%= staff.position || "Organizer" %>
-                </h3>
-                <% if (staff.description) { %>
-                <p class="has-text-grey-dark">
-                <%= staff.description %>
-                </p>
-                <% } %>
+            <div class="box">
+              <div class="columns">
+                <div class="image column">
+                  <% if (staff.image) { %>
+                  <img class="is-rounded" src="<%= staff.image %>" />
+                  <% } else { %>
+                  <i class="far fa-smile has-text-grey-lighter"></i>
+                  <% } %>
+                </div>
+                <div class="info column has-text-centered-mobile">
+                  <h1 class="title has-subtitle is-6">
+                    <%= staff.name %>
+                  </h1>
+                  <h3 class="subtitle is-7 has-text-grey">
+                    <%= staff.position || "Organizer" %>
+                  </h3>
+                  <% if (staff.description) { %>
+                  <p class="has-text-grey-dark">
+                  <%= staff.description %>
+                  </p>
+                  <% } %>
+                </div>
               </div>
             </div>
           </div>
           <% } else { %>
           <div class="column staff-card is-half-mobile is-one-third-tablet is-one-third-desktop is-one-quarter-widescreen">
-            <div class="has-text-centered">
+            <div class="box has-text-centered">
               <div class="image">
                 <% if (staff.image) { %>
                 <img class="is-rounded" src="<%= staff.image %>" />
