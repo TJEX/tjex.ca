@@ -6,7 +6,11 @@ const app = express()
 
 app.set('views', 'public/views')
 app.set('view engine', 'ejs')
-app.use(sassMiddleware({ src: 'public', debug: config }))
+app.use(sassMiddleware({
+  src: 'public',
+  debug: true,
+  outputStyle: 'compressed'
+}))
 app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }))
 
