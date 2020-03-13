@@ -16,10 +16,11 @@ const transporter = nodemailer.createTransport({
 })
 
 function index(req, res) {
+  res.setHeader('Cache-control', 'public, max-age=604800')
   res.render('contact')
 }
 
-function sendMessage(req, res) {
+function sendMessage(req, res, next) {
   const name = _.get(req, 'body.contact-name')
   const email = _.get(req, 'body.contact-email')
   const message = _.get(req, 'body.contact-message')
@@ -30,7 +31,7 @@ function sendMessage(req, res) {
     subject: '[TJEX.ca Contact Form] ' + name,
     html: name + ' (' + email + ')<br/><br/>' + message
   }, (err, info, response) => {
-    res.render('contact')
+    next()
   })
 }
 

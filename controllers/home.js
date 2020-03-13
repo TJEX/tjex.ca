@@ -21,6 +21,7 @@ function index(req, res) {
           return event
         })
         .value()
+      res.setHeader('Cache-Control', 'public, max-age=28800')
       res.render('home', { events })
     })
 }

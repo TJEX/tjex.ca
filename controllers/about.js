@@ -44,9 +44,8 @@ const STAFF = [
 ]
 
 function index(req, res) {
-  res.render('about', {
-    STAFF
-  })
+  res.setHeader('Cache-control', 'public, max-age=86400')
+  res.render('about', { STAFF })
 }
 
 module.exports = {

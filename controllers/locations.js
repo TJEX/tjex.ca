@@ -12,6 +12,7 @@ const LOCATIONS = [{
 }]
 
 function index(req, res) {
+  res.setHeader('Cache-control', 'public, max-age=604800')
   res.render('locations', {
     GOOGLE_MAPS_API_KEY,
     LOCATIONS

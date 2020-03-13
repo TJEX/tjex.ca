@@ -15,7 +15,7 @@ app.use(sassMiddleware({
   debug: true,
   outputStyle: 'compressed'
 }))
-app.use(express.static('public'))
+app.use(express.static('public', { maxAge: 31536000000 }))
 app.use(express.urlencoded({ extended: true }))
 
 const routes = require('./routes')(app)
