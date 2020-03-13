@@ -8,6 +8,7 @@ $primary: #ea0005;
 
 // navbar
 $navbar-background-color: $tjex-white;
+$navbar-item-hover-color: $primary;
 
 // box
 $box-shadow: none;
@@ -17,63 +18,92 @@ $box-shadow: none;
 
 
 html {
-	background-color: $tjex-white;
+  background-color: $tjex-white;
 }
 
 .navbar-item img {
-	max-height: 3.5rem;
+  max-height: 3.5rem;
 }
 
 .navbar-item.logo {
-	flex: 1;
+  flex: 1;
 }
 
-.event-card .title {
-	margin-bottom: 0.5rem;
+.event-card {
+  position: relative;
+
+  .title {
+    margin-bottom: 0.5rem;
+  }
+
+  .event-card__special-alert {
+    display: none;
+  }
+}
+
+.event-card.event-card--special {
+  border-left: 2pt solid $primary;
+  border-radius-top-left: 0;
+  border-radius-bottom-left: 0;
+
+  .event-card__special-alert {
+    display: flex;
+    margin-right: 1em;
+  }
 }
 
 .staff-card {
-	margin-bottom: 2rem;
+  margin-bottom: 2rem;
 
-	.image {
-		margin: 0 auto;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		margin-bottom: 0.5rem;
+  .image {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
 
-		img {
-			max-width: 10rem;
-		}
-	}
+    img {
+      max-width: 10rem;
+    }
+  }
 
-	i {
-		font-size: 5rem;
-	}
+  i {
+    font-size: 5rem;
+  }
 
-	.subtitle {
-		margin-bottom: 0.75rem;
-	}
+  .subtitle {
+    margin-bottom: 0.75rem;
+  }
 }
 
 @media only screen and (min-width: 768px) {
-	.staff-card.main-staff .image {
-		justify-content: flex-end;
-	}
+  .staff-card.main-staff .image {
+    justify-content: flex-end;
+  }
 }
 
 .staff-card.main-staff {
-	.image img {
-		max-width: 15rem;
-	}
+  .image img {
+    max-width: 15rem;
+  }
 
-	.info {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-	}
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 p + p {
-	margin-top: 1rem;
+  margin-top: 1rem;
+}
+
+a[href]:not([class]) {
+  color: $grey-darker;
+  border-bottom: 2pt solid $primary-light;
+
+  &:hover {
+    background: $primary-light;
+    transition: all 0.2s ease-in-out;
+  }
 }

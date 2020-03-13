@@ -17,6 +17,7 @@ function index(req, res) {
       let events = _.chain(api_res)
         .map((event) => {
           event.formatted_starttime = moment(event.time).format('ddd, MMM D, h:mm a')
+          event.is_special = _.get(event, 'fee.amount', 0) !== 2
           return event
         })
         .value()
