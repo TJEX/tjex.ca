@@ -11,6 +11,7 @@
   "author": "Brandon Cardoso",
   "license": "ISC",
   "dependencies": {
+    "bulma": "^0.8.0",
     "compression": "^1.7.4",
     "config": "^3.2.5",
     "ejs": "^3.0.1",
@@ -18,12 +19,12 @@
     "helmet": "^3.21.3",
     "lodash": "^4.17.15",
     "moment": "^2.24.0",
+    "node-sass": "^4.13.1",
+    "node-sass-middleware": "^0.11.0",
     "nodemailer": "^6.4.5",
     "request": "^2.88.2",
     "request-promise": "^4.2.5",
-    "bulma": "^0.8.0",
-    "node-sass": "^4.13.1",
-    "node-sass-middleware": "^0.11.0"
+    "serve-favicon": "^2.5.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.2"
