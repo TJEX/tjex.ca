@@ -2,7 +2,7 @@ const _ = require('lodash')
 const moment = require('moment')
 const reqp = require('request-promise')
 
-const NUM_UPCOMING_EVENTS = 5
+const NUM_UPCOMING_EVENTS = 6
 
 function index(req, res) {
   reqp({ uri: 'http://api.meetup.com/tjex-ca/events',

@@ -47,10 +47,11 @@ html {
   }
 
   .level-right {
+    display: flex;
     flex-direction: column;
+    justify-content: center;
     padding: $box-padding;
     padding-left: 0;
-    justify-content: center;
   }
 }
 
