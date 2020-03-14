@@ -16,7 +16,6 @@ $box-shadow: none;
 @import "../../node_modules/bulma/bulma.sass";
 /* end bulma */
 
-
 html {
   background-color: $tjex-white;
 }
@@ -30,14 +29,28 @@ html {
 }
 
 .event-card {
-  position: relative;
+  display: flex;
+  padding: 0;
+  align-items: stretch;
 
-  .title {
-    margin-bottom: 0.5rem;
+  .level-item {
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding: $box-padding;
+    line-height: 1rem;
+    justify-content: flex-start;
+    margin-bottom: 0;
   }
 
   .event-card__special-alert {
     display: none;
+  }
+
+  .level-right {
+    flex-direction: column;
+    padding: $box-padding;
+    padding-left: 0;
+    justify-content: center;
   }
 }
 
@@ -50,6 +63,18 @@ html {
     display: flex;
     margin-right: 1em;
   }
+}
+
+.event-card__start-time {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: $box-padding;
+  background: $grey-lightest;
+  border-top-left-radius: $box-radius;
+  border-bottom-left-radius: $box-radius;
+  text-transform: uppercase;
 }
 
 .staff-card {

@@ -1,25 +1,26 @@
 <!-- views/partials/event-card.ejs -->
-<div class="box event-card <%= event.is_special ? 'event-card--special' : '' %>">
-    <h1 class="title is-6 "><%= event.name %></h1>
-    <div class="level">
-        <div class="level-left">
-            <span class="tag is-primary event-card__special-alert">
-                Special Event
-            </span>
-            <h3 class="subtitle is-7 has-text-grey is-uppercase">
-                <%= event.formatted_starttime %> at <%= event.venue.name %>
-            </h3>
+<div class="box level event-card <%= event.isSpecial ? 'event-card--special' : '' %>">
+    <div class="level-left event-card__start-time">
+        <div class="event-card__date">
+            <%= event.startTime.date + ' ' + event.startTime.month %>
         </div>
-        <div class="level-right">
-            <h3 class="subtitle is-7">
-                <a href="<%= event.link %>">
-                    <% if (event.rsvpable) { %>
-                    Sign up now!
-                    <% } else { %>
-                    View on Meetup
-                    <% } %>
-                </a>
-            </h3>
+        <div class="event-card__time is-size-7">
+            <%= event.startTime.time %>
+        </div>
+    </div>
+    <div class="level-item">
+        <%= event.name %>
+    </div>
+    <div class="level-right is-size-7 has-text-grey">
+        <% if (event.isSpecial) { %>
+        <div class="tag is-success">
+            Special Event!
+        </div>
+        <% } %>
+        <div>
+            <a href="<%= event.link %>" target="_blank">
+                <%= event.isRsvpOpen ? 'Sign up!' : 'More info' %>
+            </a>
         </div>
     </div>
 </div>

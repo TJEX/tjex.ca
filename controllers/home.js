@@ -16,14 +16,31 @@ function index(req, res) {
     .then((api_res) => {
       let events = _.chain(api_res)
         .map((event) => {
-          event.formatted_starttime = moment(event.time).format('ddd, MMM D, h:mm a')
-          event.is_special = _.get(event, 'fee.amount', 0) !== 2
-          return event
+          const eventMoment = moment(event.time)
+
+          return {
+            name: _.get(event, 'name'),
+            link: _.get(event, 'link', 'www.meetup.com/tjex-ca'),
+            isSpecial: isSpecialEvent(event),
+            isRsvpOpen: _.get(event, 'rsvpable', false),
+            startTime: {
+              full: eventMoment.format('ddd, MMM D, h:mm a'),
+              day: eventMoment.format('ddd'),
+              date: eventMoment.format('D'),
+              month: eventMoment.format('MMM'),
+              time: eventMoment.format('h:mma')
+            }
+          }
         })
         .value()
+
       res.setHeader('Cache-Control', 'public, max-age=28800')
       res.render('home', { events })
     })
+}
+
+function isSpecialEvent(event) {
+  return _.get(event, 'fee.amount', 0) !== 2
 }
 
 module.exports = {
