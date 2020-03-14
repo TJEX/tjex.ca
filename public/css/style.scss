@@ -54,17 +54,6 @@ html {
   }
 }
 
-.event-card.event-card--special {
-  border-left: 2pt solid $primary;
-  border-radius-top-left: 0;
-  border-radius-bottom-left: 0;
-
-  .event-card__special-alert {
-    display: flex;
-    margin-right: 1em;
-  }
-}
-
 .event-card__start-time {
   display: flex;
   justify-content: center;
