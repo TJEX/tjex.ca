@@ -1,0 +1,57 @@
+
+[
+  {
+    "name": "Mark",
+    "main": true,
+    "position": "Co-founder & Treasurer",
+    "link": "https://www.meetup.com/tjex-ca/members/2732930"
+  },
+  {
+    "name": "Forough",
+    "main": true,
+    "position": "Head Organizer",
+    "link": "https://www.meetup.com/tjex-ca/members/211300357"
+  },
+  {
+    "name": "Lona",
+    "link": "https://www.meetup.com/tjex-ca/members/191350867"
+  },
+  {
+    "name": "Andy",
+    "link": "https://www.meetup.com/tjex-ca/members/195997635"
+  },
+  {
+    "name": "Carlo",
+    "link": "https://www.meetup.com/tjex-ca/members/203251029"
+  },
+  {
+    "name": "Ryan",
+    "link": "https://www.meetup.com/tjex-ca/members/211798058"
+  },
+  {
+    "name": "Pek",
+    "link": "https://www.meetup.com/tjex-ca/members/191237729"
+  },
+  {
+    "name": "Brandon",
+    "image": "/img/staff/brandon.jpg",
+    "message": "I made this website.",
+    "link": "https://www.meetup.com/tjex-ca/members/227101020"
+  },
+  {
+    "name": "Joe",
+    "link": "https://www.meetup.com/tjex-ca/members/260800409"
+  },
+  {
+    "name": "Yuumi",
+    "link": "https://www.meetup.com/tjex-ca/members/268350994"
+  },
+  {
+    "name": "Manami",
+    "link": "https://www.meetup.com/tjex-ca/members/217204706"
+  },
+  {
+    "name": "Daiki",
+    "link": "https://www.meetup.com/tjex-ca/members/292460285"
+  }
+]

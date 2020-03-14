@@ -14,28 +14,28 @@
       <div class="container">
         <h1 class="title is-4">Staff & Organizers</h1>
         <div class="columns is-mobile is-multiline is-centered is-6">
-          <% STAFF.forEach(function (staff) { %>
-          <% if (staff.main) { %>
+          <% staff.forEach(function (member) { %>
+          <% if (member.main) { %>
           <div class="column staff-card main-staff is-full-mobile is-half-tablet">
             <div class="box">
               <div class="columns">
                 <div class="image column">
-                  <% if (staff.image) { %>
-                  <img class="is-rounded" src="<%= staff.image %>" />
+                  <% if (member.image) { %>
+                  <img class="is-rounded" src="<%= member.image %>" />
                   <% } else { %>
                   <i class="far fa-smile has-text-grey-lighter"></i>
                   <% } %>
                 </div>
                 <div class="info column has-text-centered-mobile">
                   <h1 class="title has-subtitle is-6">
-                    <%= staff.name %>
+                    <a href="<%= member.link %>" target="_blank"><%= member.name %></a>
                   </h1>
                   <h3 class="subtitle is-7 has-text-grey">
-                    <%= staff.position || "Organizer" %>
+                    <%= member.position || "Organizer" %>
                   </h3>
-                  <% if (staff.description) { %>
+                  <% if (member.message) { %>
                   <p class="has-text-grey-dark">
-                  <%= staff.description %>
+                  <%= member.message %>
                   </p>
                   <% } %>
                 </div>
@@ -46,21 +46,21 @@
           <div class="column staff-card is-half-mobile is-one-third-tablet is-one-third-desktop is-one-quarter-widescreen">
             <div class="box has-text-centered">
               <div class="image">
-                <% if (staff.image) { %>
-                <img class="is-rounded" src="<%= staff.image %>" />
+                <% if (member.image) { %>
+                <img class="is-rounded" src="<%= member.image %>" />
                 <% } else { %>
                 <i class="far fa-smile has-text-grey-lighter"></i>
                 <% } %>
               </div>
               <h1 class="title has-subtitle is-6">
-                <%= staff.name %>
+                <a href="<%= member.link %>" target="_blank"><%= member.name %></a>
               </h1>
               <h3 class="subtitle is-7 has-text-grey">
-                <%= staff.position || "Organizer" %>
+                <%= member.position || "Organizer" %>
               </h3>
-              <% if (staff.description) { %>
+              <% if (member.message) { %>
               <p class="has-text-grey-dark">
-              <%= staff.description %>
+              <%= member.message %>
               </p>
               <% } %>
             </div>
