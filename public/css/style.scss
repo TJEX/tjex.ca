@@ -68,6 +68,10 @@ html {
 }
 
 .staff-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
   .image {
     margin: 0 auto;
     display: flex;
