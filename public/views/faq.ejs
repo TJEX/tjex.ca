@@ -1,0 +1,34 @@
+<!-- views/faq.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('partials/head') %>
+  <body>
+    <%- include('partials/nav') %>
+    <section class="section">
+      <div class="container">
+        <h1 class="title is-4">Frequently Asked Questions</h1>
+        <% faq.forEach(function (f) { %>
+        <div class="card faq">
+          <header class="card-header">
+            <p class="card-header-title">
+            <%= f.question %>
+            </p>
+            <div class="card-header-icon" aria-label="show answer">
+              <span class="icon">
+                <i class="fas fa-chevron-down" aria-hidden="true"></i>
+              </span>
+            </div>
+          </header>
+          <div class="card-content">
+            <div class="content">
+              <%- f.answer %>
+            </div>
+          </div>
+        </div>
+        <% }) %>
+      </div>
+    </section>
+  </body>
+  <script src="/js/faq.js"></script>
+</html>
+

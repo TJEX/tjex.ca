@@ -13,6 +13,12 @@ $navbar-item-hover-color: $primary;
 // box
 $box-shadow: none;
 
+// card
+$card-shadow: none;
+$card-header-shadow: none;
+$card-header-weight: 500;
+$card-content-background-color: #fff;
+
 @import "../../node_modules/bulma/bulma.sass";
 /* end bulma */
 
@@ -127,4 +133,47 @@ a[href]:not([class]) {
 
 .tjex-splash img {
   border-radius: $box-radius;
+}
+
+.faq {
+  .card-header {
+    border-radius: $box-radius;
+    cursor: pointer;
+  }
+
+  .card-header-icon {
+    color: $grey;
+  }
+
+  .card-content {
+    background: $grey-lightest;
+    height: 0;
+    padding: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease-in-out;
+    border-bottom-left-radius: $box-radius;
+    border-bottom-right-radius: $box-radius;
+  }
+
+  &.active {
+    .card-header {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    .card-content {
+      height: auto;
+      opacity: 1;
+      padding: $box-padding;
+    }
+  }
+
+  & + .faq {
+    margin-top: 1rem;
+    border-radius: $box-radius;
+  }
+
+  ul {
+    margin-top: 0;
+  }
 }

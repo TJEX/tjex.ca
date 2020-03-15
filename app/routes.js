@@ -8,4 +8,5 @@ module.exports = (app) => {
   app.get('/about', controllers.about.index)
   app.get('/contact', controllers.contact.index)
   app.post('/contact', controllers.contact.sendMessage, controllers.contact.index)
+  app.get('/faq', controllers.faq.index)
 }
